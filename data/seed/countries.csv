@@ -1,0 +1,17 @@
+country_code,country_name,country_group,euro_adoption_date,is_aggregate,sort_order
+HR,Croatia,Croatia,2023-01-01,0,1
+EA19,Euro area (19 countries fixed),Euro area,,1,10
+EA20,Euro area (20 countries fixed),Euro area,,1,11
+EA21,Euro area (21 countries fixed),Euro area,,1,12
+EA,Euro area (changing composition),Euro area,,1,13
+EU27_2020,European Union (27 countries),EU,,1,14
+SI,Slovenia,Earlier euro adopter,2007-01-01,0,20
+SK,Slovakia,Earlier euro adopter,2009-01-01,0,21
+EE,Estonia,Earlier euro adopter,2011-01-01,0,22
+LV,Latvia,Earlier euro adopter,2014-01-01,0,23
+LT,Lithuania,Earlier euro adopter,2015-01-01,0,24
+BG,Bulgaria,Later euro adopter,2026-01-01,0,30
+HU,Hungary,Non-euro peer,,0,40
+PL,Poland,Non-euro peer,,0,41
+CZ,Czechia,Non-euro peer,,0,42
+RO,Romania,Non-euro peer,,0,43

@@ -1,0 +1,13 @@
+name: euro-cijene
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - pandas
+  - requests
+  - pyarrow
+  - pyodbc
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - pytest
