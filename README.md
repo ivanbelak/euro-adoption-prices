@@ -29,6 +29,7 @@ FRED (US CPI)   ──┘            stg → dim / fact → pbi views
 | Load | Staging + dimension tables, ~5.5M rows in ~30s | [`src/load_sql.py`](src/load_sql.py) |
 | Transform | Star schema in SQL: pivot units, build calendar | [`sql/`](sql/) |
 | Validate | Recompute year-over-year inflation from the index and compare with Eurostat's published rate | [`sql/04_views.sql`](sql/04_views.sql) (`qa.yoy_check`) |
+| Analyse | Event study: align every euro adopter on its adoption month, rebase to 100 the month before, compare with EA19 over the same months | [`sql/05_event_study.sql`](sql/05_event_study.sql), [`sql/06_event_study_findings.sql`](sql/06_event_study_findings.sql) |
 
 ## Notes on the data
 

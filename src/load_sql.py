@@ -128,6 +128,7 @@ def main() -> None:
 
         run_script(conn, SQL / "03_transform.sql")
         run_script(conn, SQL / "04_views.sql")
+        run_script(conn, SQL / "05_event_study.sql")
 
         cur = conn.cursor()
         for table in ["dim.country", "dim.category", "dim.calendar",
