@@ -1,0 +1,24 @@
+relationship 68df88aa-34e3-5ac4-9dc5-82df81c4ae8d
+	fromColumn: 'Event Study'.country_code
+	toColumn: Adopter.country_code
+
+relationship d0ef87a2-abbb-5dc1-9f82-31c7f5e53e2a
+	fromColumn: 'Event Study'.control_code
+	toColumn: Control.country_code
+
+relationship 1eab64d5-a7ce-56a6-96ea-554aa1630485
+	fromColumn: 'Event Study'.coicop_code
+	toColumn: Category.coicop_code
+
+relationship d7bd0e98-f00c-5d54-b484-5e85ae4169bf
+	fromColumn: 'Pre Trend'.country_code
+	toColumn: Adopter.country_code
+
+relationship b83cbfa6-2517-5365-9dc9-1e14bdf88370
+	fromColumn: 'Pre Trend'.control_code
+	toColumn: Control.country_code
+
+relationship ca56739c-fdf6-5d28-a066-467269020919
+	fromColumn: 'Pre Trend'.coicop_code
+	toColumn: Category.coicop_code
+

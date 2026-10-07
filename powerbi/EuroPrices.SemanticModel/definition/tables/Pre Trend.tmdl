@@ -1,0 +1,89 @@
+table 'Pre Trend'
+	lineageTag: a8ddd77f-13a4-548c-b8b1-08da79ca4cc5
+
+	/// How fast excess was already changing before adoption, index points per year, fitted over the window picked in the Window table
+	measure 'Pre-trend per year' = VAR w = SELECTEDVALUE('Window'[months], 24) RETURN CALCULATE(AVERAGE('Pre Trend'[pre_slope]) * 12, 'Pre Trend'[pre_window] = w)
+		formatString: 0.0
+		lineageTag: defef700-899b-5771-af9b-af9cbc2db82a
+
+	column country_code
+		dataType: string
+		isHidden
+		lineageTag: 348812f7-b918-53e5-9d41-57a8eb0a9e7e
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = User
+
+	column control_code
+		dataType: string
+		isHidden
+		lineageTag: 46d4c1a9-5f07-5609-9843-af53934f9364
+		summarizeBy: none
+		sourceColumn: control_code
+
+		annotation SummarizationSetBy = User
+
+	column coicop_code
+		dataType: string
+		isHidden
+		lineageTag: f274f2a6-ef7e-5558-8e61-85e2da7d5948
+		summarizeBy: none
+		sourceColumn: coicop_code
+
+		annotation SummarizationSetBy = User
+
+	column pre_window
+		dataType: int64
+		lineageTag: 4d24d781-f00e-5c5c-98ea-39375f5cc768
+		summarizeBy: none
+		sourceColumn: pre_window
+
+		annotation SummarizationSetBy = User
+
+	column n_pre_months
+		dataType: int64
+		lineageTag: e0087c0f-5203-5561-9e0a-ce3d7364eabe
+		summarizeBy: none
+		sourceColumn: n_pre_months
+
+		annotation SummarizationSetBy = User
+
+	column pre_slope
+		dataType: double
+		formatString: 0.00
+		lineageTag: c54248e9-9f3f-591e-92d4-184f6db6fb1e
+		summarizeBy: none
+		sourceColumn: pre_slope
+
+		annotation SummarizationSetBy = User
+
+	column excess_m11
+		dataType: double
+		formatString: 0.00
+		lineageTag: d5ec5694-2a2e-5fa8-806d-e2d46f243447
+		summarizeBy: none
+		sourceColumn: excess_m11
+
+		annotation SummarizationSetBy = User
+
+	column excess_m11_detrended
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8d9dfba8-5e3c-52bd-9ae4-475a8175c02f
+		summarizeBy: none
+		sourceColumn: excess_m11_detrended
+
+		annotation SummarizationSetBy = User
+
+	partition 'Pre Trend' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(#"SQL Server", #"SQL Database"),
+				    Data = Source{[Schema = "pbi", Item = "pre_trend"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table
+

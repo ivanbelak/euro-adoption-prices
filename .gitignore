@@ -1,4 +1,4 @@
-# Sirovi podaci se uvijek mogu ponovno skinuti skriptom
+# Raw data can always be downloaded again with the scripts
 data/raw/
 
 # Python
@@ -7,10 +7,13 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 
-# Power BI lokalne postavke i cache (PBIP format)
+# Power BI local settings and data cache (PBIP format)
 powerbi/**/.pbi/localSettings.json
 powerbi/**/.pbi/cache.abf
 
 # OS
 Thumbs.db
 desktop.ini
+
+# Local helper scripts
+tools/

@@ -1,0 +1,10 @@
+expression 'SQL Server' = "localhost" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: ce71b205-121c-527e-9e76-32580adbde10
+
+	annotation PBI_ResultType = Text
+
+expression 'SQL Database' = "EuroPrices" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 8f69dfc7-3338-5e19-90f6-e1a9f8ec7b68
+
+	annotation PBI_ResultType = Text
+

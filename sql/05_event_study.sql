@@ -5,8 +5,9 @@
 -- and the same rebasing is applied to each control over the same calendar
 -- months. excess = adopter - control, in index points.
 --
--- Controls: EA19 plus every non-euro peer (HU, PL, CZ, RO). The view is in
--- long format: each adopter row is repeated once per control (control_code),
+-- Controls: EA19, every non-euro peer (HU, PL, CZ, RO), and their average
+-- (control_code = 'PEERS'). The view is in long format: each adopter row is
+-- repeated once per control (control_code),
 -- so Power BI can switch controls with a slicer and new controls only need
 -- a row in data/seed/countries.csv.
 --
@@ -21,7 +22,8 @@ GO
 CREATE OR ALTER VIEW pbi.event_study AS
 WITH
 
--- STEP 1: adopters only, +-24 months around adoption
+-- STEP 1: adopters only, +-48 months around adoption (Power BI narrows it
+-- to the window picked in the report)
 events AS (
     SELECT
         h.*,
@@ -31,7 +33,7 @@ events AS (
     INNER JOIN dim.country c
         ON h.country_code = c.country_code
     -- WHERE runs before SELECT, so the event_month alias can't be used here
-    WHERE DATEDIFF(month, c.euro_adoption_date, h.month_date) BETWEEN -24 AND 24
+    WHERE DATEDIFF(month, c.euro_adoption_date, h.month_date) BETWEEN -48 AND 48
       AND c.euro_adoption_date IS NOT NULL
 ),
 
@@ -81,6 +83,33 @@ with_control AS (
         ON  ctl_base.country_code = k.control_code
         AND ctl_base.coicop_code  = r.coicop_code
         AND ctl_base.month_date   = r.base_month
+),
+
+-- STEP 5: one more control, the average of the non-euro peers.
+-- Each peer is rebased first and averaged afterwards; the average only
+-- counts when every peer has data, so its make-up never changes.
+peer_average AS (
+    SELECT
+        w.country_code,
+        'PEERS' AS control_code,
+        w.coicop_code,
+        w.event_month,
+        w.month_date,
+        MAX(w.index_rel) AS index_rel,   -- the same on every peer row
+        CASE WHEN COUNT(w.control_rel) = COUNT(*) THEN AVG(w.control_rel) END AS control_rel
+    FROM with_control w
+    INNER JOIN dim.country c
+        ON c.country_code = w.control_code
+    WHERE c.country_group = 'Non-euro peer'
+    GROUP BY w.country_code, w.coicop_code, w.event_month, w.month_date
+),
+
+all_controls AS (
+    SELECT country_code, control_code, coicop_code, event_month, month_date, index_rel, control_rel
+    FROM with_control
+    UNION ALL
+    SELECT country_code, control_code, coicop_code, event_month, month_date, index_rel, control_rel
+    FROM peer_average
 )
 
 SELECT
@@ -88,5 +117,5 @@ SELECT
     index_rel,
     control_rel,
     index_rel - control_rel AS excess
-FROM with_control;
+FROM all_controls;
 GO

@@ -1,0 +1,108 @@
+table Category
+	lineageTag: 094bd99a-6be0-52a2-bd4a-8dfad84ad10a
+
+	column coicop_code
+		dataType: string
+		lineageTag: 85f2f319-d813-5926-86f0-214885b5bab7
+		summarizeBy: none
+		sourceColumn: coicop_code
+
+		annotation SummarizationSetBy = User
+
+	column category_name
+		dataType: string
+		lineageTag: 6ff1da6c-0796-5af0-aae8-0fdba32cb537
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = User
+
+	column category_level
+		dataType: int64
+		lineageTag: c297b27c-1531-5dc5-b292-8944432efdbe
+		summarizeBy: none
+		sourceColumn: category_level
+
+		annotation SummarizationSetBy = User
+
+	column parent_code
+		dataType: string
+		isHidden
+		lineageTag: 488eb9c2-ee08-5cdd-9581-a77c240fbcc8
+		summarizeBy: none
+		sourceColumn: parent_code
+
+		annotation SummarizationSetBy = User
+
+	column parent_name
+		dataType: string
+		lineageTag: 91fbdb23-7171-532f-ae90-af89aaae3aea
+		summarizeBy: none
+		sourceColumn: parent_name
+
+		annotation SummarizationSetBy = User
+
+	column is_special_aggregate
+		dataType: boolean
+		lineageTag: ea9451d0-5767-58a2-9379-484bdf6f427f
+		summarizeBy: none
+		sourceColumn: is_special_aggregate
+
+		annotation SummarizationSetBy = User
+
+	column category_group
+		dataType: string
+		sortByColumn: category_group_sort
+		lineageTag: 625ba3b3-75e2-5687-b850-bae16a1f9f68
+		summarizeBy: none
+		sourceColumn: category_group
+
+		annotation SummarizationSetBy = User
+
+	column category_group_sort
+		dataType: int64
+		isHidden
+		lineageTag: ec49e25b-6a58-5ce8-9fdb-0b06c027ce09
+		summarizeBy: none
+		sourceColumn: category_group_sort
+
+		annotation SummarizationSetBy = User
+
+	column category_label
+		dataType: string
+		sortByColumn: category_label_sort
+		lineageTag: 370ebf1c-9db3-5a4e-98ab-33d26958533a
+		summarizeBy: none
+		sourceColumn: category_label
+
+		annotation SummarizationSetBy = User
+
+	column category_label_sort
+		dataType: string
+		isHidden
+		lineageTag: 60809bf3-b161-5ed4-b79a-64a0641edaac
+		summarizeBy: none
+		sourceColumn: category_label_sort
+
+		annotation SummarizationSetBy = User
+
+	column in_slicer
+		dataType: boolean
+		isHidden
+		lineageTag: 0f8dbcd6-3a1f-5edf-aaa0-b0c93680fc4a
+		summarizeBy: none
+		sourceColumn: in_slicer
+
+		annotation SummarizationSetBy = User
+
+	partition Category = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(#"SQL Server", #"SQL Database"),
+				    Data = Source{[Schema = "pbi", Item = "category"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table
+

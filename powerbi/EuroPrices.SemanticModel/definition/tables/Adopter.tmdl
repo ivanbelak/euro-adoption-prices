@@ -1,0 +1,66 @@
+table Adopter
+	lineageTag: 97319749-c1db-5693-aa56-30930dc7ba5e
+
+	column country_code
+		dataType: string
+		lineageTag: e6d91ccf-f6cb-5a93-be54-d2a641e6f702
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = User
+
+	column country_name
+		dataType: string
+		sortByColumn: sort_order
+		lineageTag: 41589249-73ff-5ff6-9670-f0a787281391
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = User
+
+	column country_group
+		dataType: string
+		lineageTag: 5ba87deb-dde3-50f5-82bc-f66dae078e57
+		summarizeBy: none
+		sourceColumn: country_group
+
+		annotation SummarizationSetBy = User
+
+	column euro_adoption_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 15a65225-eb40-5855-9ff2-bdf70f6fbf04
+		summarizeBy: none
+		sourceColumn: euro_adoption_date
+
+		annotation SummarizationSetBy = User
+
+	column is_aggregate
+		dataType: boolean
+		isHidden
+		lineageTag: a56f7aa7-7ab6-5244-b9f4-8ff22936b95e
+		summarizeBy: none
+		sourceColumn: is_aggregate
+
+		annotation SummarizationSetBy = User
+
+	column sort_order
+		dataType: int64
+		isHidden
+		lineageTag: 6cb42b99-f739-5c76-82a4-e03aa4ac51eb
+		summarizeBy: none
+		sourceColumn: sort_order
+
+		annotation SummarizationSetBy = User
+
+	partition Adopter = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(#"SQL Server", #"SQL Database"),
+				    Data = Source{[Schema = "pbi", Item = "country"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table
+
