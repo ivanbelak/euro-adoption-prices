@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Adopter.country_name",
-              "nativeQueryRef": "country_name",
-              "active": true
+              "nativeQueryRef": "Adopter",
+              "active": true,
+              "displayName": "Adopter"
             }
           ]
         },
@@ -46,8 +47,9 @@
                 }
               },
               "queryRef": "Control.country_name",
-              "nativeQueryRef": "country_name",
-              "active": true
+              "nativeQueryRef": "Control",
+              "active": true,
+              "displayName": "Control"
             }
           ]
         },

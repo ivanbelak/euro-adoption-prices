@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "Event Study.Excess",
-              "nativeQueryRef": "Excess",
+              "nativeQueryRef": "Monthly",
               "displayName": "Monthly"
             },
             {
@@ -61,7 +61,7 @@
                 }
               },
               "queryRef": "Event Study.Excess (trend-adjusted)",
-              "nativeQueryRef": "Excess (trend-adjusted)",
+              "nativeQueryRef": "Monthly, trend-adjusted",
               "displayName": "Monthly, trend-adjusted"
             },
             {
@@ -76,7 +76,7 @@
                 }
               },
               "queryRef": "Event Study.Excess (12-month avg)",
-              "nativeQueryRef": "Excess (12-month avg)",
+              "nativeQueryRef": "12-month avg",
               "displayName": "12-month avg"
             },
             {
@@ -91,7 +91,7 @@
                 }
               },
               "queryRef": "Event Study.Excess (trend-adjusted, 12-month avg)",
-              "nativeQueryRef": "Excess (trend-adjusted, 12-month avg)",
+              "nativeQueryRef": "12-month avg, trend-adjusted",
               "displayName": "12-month avg, trend-adjusted"
             }
           ]
