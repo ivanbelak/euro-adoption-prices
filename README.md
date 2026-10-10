@@ -1,7 +1,7 @@
 # Did the euro make Croatia more expensive?
 
-> 🚧 **Work in progress.** Data pipeline, database, event study and Power BI report are done;
-> statistical tests (confidence intervals, placebo test) are next.
+> 🚧 **Work in progress.** Data pipeline, database, event study, Power BI report and a placebo test
+> are done; a regression with confidence intervals is next.
 
 Croatia adopted the euro on 1 January 2023. Between December 2022 and August 2026, consumer
 prices in Croatia rose **19.0%**, compared with **10.7%** in the euro area (EA19, excluding Croatia).
@@ -22,9 +22,11 @@ The US (CPI from FRED) is included as global context only.
 
 **In short:** in all six adoptions with a full year of data, **services** got more expensive than in
 the controls during the first year of the euro, by roughly 0.3 to 3.4 index points once
-pre-existing trends are removed. **Goods** show no consistent effect. For **Croatia** the direction is
-clear but the size is not: it ranges from about +0.3 to +4 points, depending on the control and on
-how the pre-euro trend is measured.
+pre-existing trends are removed. Averaged over the six adoptions that is about **+1.5 points, more than
+97% of fake adoption dates produce** against the euro area (90% against the non-euro peers).
+**Goods** and **all items** show nothing beyond the noise. For **Croatia** alone the direction matches but
+the evidence is borderline, and the size ranges from about +0.3 to +4 points depending on the control and
+on how the pre-euro trend is measured.
 
 ### Method
 
@@ -61,6 +63,32 @@ Trend-adjusted change in excess, first year of the euro vs the year before (inde
   grow faster and had their own shocks (Hungary had ~25% inflation in early 2023). Before removing trends,
   Croatia's services excess was +4.1 against the euro area and −1.3 against the peers. After removing
   them, the two controls give similar answers for most adopters.
+
+### Is it more than noise? A placebo test
+
+Any method applied to noisy monthly data reports *some* number. To measure that noise, the same calculation is
+run for **fake adoption dates**: every month from 18 to 240 months before the real one, as far back as the data
+goes. The 18-month gap keeps the fake "year after" clear of the months when prices were already shown in euros.
+See [`notebooks/01_placebo_test.ipynb`](notebooks/01_placebo_test.ipynb).
+
+One country at a time the test is weak (Latvia's fake estimates range from −10 to +6, through the 2008-10 crisis).
+Averaged over the six adoptions, the noise partly cancels while a genuine changeover effect should not:
+
+| Average of six adoptions | Real | 90% of fake averages | p |
+|---|---|---|---|
+| Services vs euro area | **+1.54** | −2.31 to +1.36 | **0.03** |
+| Services vs non-euro peers | **+1.50** | −2.01 to +1.84 | 0.10 |
+| Goods vs euro area | +0.91 | −1.74 to +1.28 | 0.12 |
+| Goods vs non-euro peers | −0.48 | −1.79 to +1.71 | 0.69 |
+| All items vs euro area | +0.86 | −1.82 to +1.38 | 0.14 |
+| All items vs non-euro peers | +0.13 | −1.96 to +1.55 | 0.44 |
+
+p = share of fake averages at least as large as the real one (10,000 random draws of one fake date per adopter).
+
+![Placebo test: services, average of six adoptions vs the distribution of fake adoption dates](docs/img/placebo_services.png)
+
+Croatia on its own: services +1.8 against the euro area (p ≈ 0.07) and +0.3 against the peers (p ≈ 0.37).
+Neighbouring fake dates share most of their data, so the p-values are a guide rather than exact.
 
 ### Why Croatia is the hardest case
 
@@ -125,6 +153,7 @@ The database follows a medallion-style layout: `stg` holds raw data as loaded (b
 | Event study | Align adopters, rebase, pair with every control (CTEs, window functions, `CROSS JOIN`) | [`sql/05_event_study.sql`](sql/05_event_study.sql) |
 | Pre-trends | OLS slope of excess before adoption for four windows; trend-adjusted excess | [`sql/07_pre_trends.sql`](sql/07_pre_trends.sql) |
 | Explore | Queries behind the findings above | [`sql/06_event_study_findings.sql`](sql/06_event_study_findings.sql) |
+| Placebo test | The event study in pandas for any date, run for every fake adoption date the data allows (38 to 223 per adopter); checked against the SQL views to 1e-14 | [`src/event_study.py`](src/event_study.py), [`notebooks/01_placebo_test.ipynb`](notebooks/01_placebo_test.ipynb) |
 
 ## Data quality
 
@@ -156,6 +185,7 @@ python src/fetch_eurostat.py
 python src/fetch_fred.py
 python src/load_sql.py        # set SQL_SERVER=... if not localhost
 pytest
+python notebooks/build_placebo_notebook.py   # re-runs the placebo test notebook
 ```
 
 Then open `powerbi/EuroPrices.pbip` in Power BI Desktop and click **Refresh** (the server and database

@@ -11,3 +11,7 @@ dependencies:
   - seaborn
   - jupyterlab
   - pytest
+  - pip
+  - pip:
+      # conda's libzmq build crashes the Jupyter kernel on Windows (epoll.cpp:73)
+      - pyzmq
