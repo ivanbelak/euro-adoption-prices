@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "791de623d35a50408ed4",
   "position": {
     "x": 24,
     "y": 92,
     "z": 19000,
-    "width": 150,
     "height": 64,
+    "width": 150,
     "tabOrder": 19000
   },
   "visual": {
@@ -82,7 +82,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
+                    "Name": "w",
                     "Entity": "Window",
                     "Type": 0
                   }
@@ -96,7 +96,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "w"
                                 }
                               },
                               "Property": "label"

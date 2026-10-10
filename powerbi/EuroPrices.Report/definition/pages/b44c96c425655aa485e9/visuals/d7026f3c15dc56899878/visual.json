@@ -1,38 +1,18 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "d7026f3c15dc56899878",
   "position": {
     "x": 644,
     "y": 172,
     "z": 23000,
-    "width": 612,
     "height": 300,
+    "width": 612,
     "tabOrder": 23000
   },
   "visual": {
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Adopter"
-                    }
-                  },
-                  "Property": "country_name"
-                }
-              },
-              "queryRef": "Adopter.country_name",
-              "nativeQueryRef": "Adopter",
-              "active": true,
-              "displayName": "Adopter"
-            }
-          ]
-        },
         "Columns": {
           "projections": [
             {
@@ -50,6 +30,26 @@
               "nativeQueryRef": "Control",
               "active": true,
               "displayName": "Control"
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Adopter"
+                    }
+                  },
+                  "Property": "country_name"
+                }
+              },
+              "queryRef": "Adopter.country_name",
+              "nativeQueryRef": "Adopter",
+              "active": true,
+              "displayName": "Adopter"
             }
           ]
         },
@@ -186,6 +186,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "cf4900d4227e15d8db1a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Control"
+              }
+            },
+            "Property": "country_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5f040c00799bff0998bc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess after 1 year (trend-adjusted)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

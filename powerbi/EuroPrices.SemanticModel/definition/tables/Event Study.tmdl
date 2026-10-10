@@ -85,10 +85,12 @@ table 'Event Study'
 
 		annotation SummarizationSetBy = User
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column index_rel
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 46d07a16-3ca6-52f3-908a-e5de97dfd261
 		summarizeBy: none
 		sourceColumn: index_rel
@@ -97,8 +99,8 @@ table 'Event Study'
 
 	column control_rel
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 0e6a6b26-8922-52e4-8a16-5536ce067b4e
 		summarizeBy: none
 		sourceColumn: control_rel
@@ -107,8 +109,8 @@ table 'Event Study'
 
 	column excess_points
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 1af057bc-17f1-5495-ac4a-1a3302998608
 		summarizeBy: none
 		sourceColumn: excess
@@ -117,8 +119,8 @@ table 'Event Study'
 
 	column pre_slope_12
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 14efa139-b2dd-5000-8f56-845de240975d
 		summarizeBy: none
 		sourceColumn: pre_slope_12
@@ -127,8 +129,8 @@ table 'Event Study'
 
 	column pre_slope_24
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: dd8e630f-c808-560c-b98f-0c580464e3d9
 		summarizeBy: none
 		sourceColumn: pre_slope_24
@@ -137,8 +139,8 @@ table 'Event Study'
 
 	column pre_slope_36
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 336d5d86-f42f-523f-9806-822ec2568b02
 		summarizeBy: none
 		sourceColumn: pre_slope_36
@@ -147,8 +149,8 @@ table 'Event Study'
 
 	column pre_slope_48
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: a5bc97cf-136c-5e34-b0b8-c4ce4c0983cb
 		summarizeBy: none
 		sourceColumn: pre_slope_48
@@ -157,8 +159,8 @@ table 'Event Study'
 
 	column excess_detrended
 		dataType: double
-		formatString: 0.00
 		isHidden
+		formatString: 0.00
 		lineageTag: 350032d2-c7d6-5cf1-8d7a-f1e326e21776
 		summarizeBy: none
 		sourceColumn: excess_detrended

@@ -12,10 +12,10 @@ table Window
 
 	column label
 		dataType: string
-		sortByColumn: months
 		lineageTag: e7f3ef17-caf3-50ce-9fa3-e7c3fb5b5792
 		summarizeBy: none
 		sourceColumn: label
+		sortByColumn: months
 
 		annotation SummarizationSetBy = User
 

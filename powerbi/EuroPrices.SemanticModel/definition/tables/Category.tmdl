@@ -52,10 +52,10 @@ table Category
 
 	column category_group
 		dataType: string
-		sortByColumn: category_group_sort
 		lineageTag: 625ba3b3-75e2-5687-b850-bae16a1f9f68
 		summarizeBy: none
 		sourceColumn: category_group
+		sortByColumn: category_group_sort
 
 		annotation SummarizationSetBy = User
 
@@ -70,10 +70,10 @@ table Category
 
 	column category_label
 		dataType: string
-		sortByColumn: category_label_sort
 		lineageTag: 370ebf1c-9db3-5a4e-98ab-33d26958533a
 		summarizeBy: none
 		sourceColumn: category_label
+		sortByColumn: category_label_sort
 
 		annotation SummarizationSetBy = User
 

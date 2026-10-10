@@ -11,10 +11,10 @@ table Control
 
 	column country_name
 		dataType: string
-		sortByColumn: sort_order
 		lineageTag: ffe6b39e-3ebf-5148-b7b5-ddb51fb648b5
 		summarizeBy: none
 		sourceColumn: country_name
+		sortByColumn: sort_order
 
 		annotation SummarizationSetBy = User
 
@@ -28,13 +28,15 @@ table Control
 
 	column euro_adoption_date
 		dataType: dateTime
-		formatString: yyyy-mm-dd
 		isHidden
+		formatString: yyyy-mm-dd
 		lineageTag: 377f3982-c6e9-5ac8-b34f-60fcd7362eea
 		summarizeBy: none
 		sourceColumn: euro_adoption_date
 
 		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column is_aggregate
 		dataType: boolean

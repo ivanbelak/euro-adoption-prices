@@ -10,10 +10,14 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["SQL Server","SQL Database","Event Study","Pre Trend","Window","Adopter","Control","Category"]
 
+annotation PBI_ProTooling = ["DevMode"]
+
 ref table 'Event Study'
 ref table 'Pre Trend'
 ref table Window
 ref table Adopter
 ref table Control
 ref table Category
+
+ref cultureInfo en-US
 

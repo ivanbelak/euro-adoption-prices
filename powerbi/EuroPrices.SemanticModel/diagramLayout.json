@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50,
+            "y": 526.16512689189926
+          },
+          "nodeIndex": "Adopter",
+          "nodeLineageTag": "97319749-c1db-5693-aa56-30930dc7ba5e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 773.376999763137,
+            "y": 226.88830352213631
+          },
+          "nodeIndex": "Category",
+          "nodeLineageTag": "094bd99a-6be0-52a2-bd4a-8dfad84ad10a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 629.67958508109268,
+            "y": -50
+          },
+          "nodeIndex": "Control",
+          "nodeLineageTag": "ac1d02c9-1f9c-5fa3-881c-392b49ecf02e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 499.78644895803018,
+            "y": 582.19549211332185
+          },
+          "nodeIndex": "Event Study",
+          "nodeLineageTag": "29a57642-7d23-56d5-8ca1-f8034e8929c6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 339.85627085020144,
+            "y": 205.90038872618658
+          },
+          "nodeIndex": "Pre Trend",
+          "nodeLineageTag": "a8ddd77f-13a4-548c-b8b1-08da79ca4cc5",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1007.3769997631368,
+            "y": 402.09774605666087
+          },
+          "nodeIndex": "Window",
+          "nodeLineageTag": "69664cae-273e-5a6b-988a-93c91b2d66c7",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -11,10 +11,10 @@ table Adopter
 
 	column country_name
 		dataType: string
-		sortByColumn: sort_order
 		lineageTag: 41589249-73ff-5ff6-9670-f0a787281391
 		summarizeBy: none
 		sourceColumn: country_name
+		sortByColumn: sort_order
 
 		annotation SummarizationSetBy = User
 
@@ -34,6 +34,8 @@ table Adopter
 		sourceColumn: euro_adoption_date
 
 		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column is_aggregate
 		dataType: boolean

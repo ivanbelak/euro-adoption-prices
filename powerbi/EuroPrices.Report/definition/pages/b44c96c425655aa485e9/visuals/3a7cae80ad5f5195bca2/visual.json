@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "3a7cae80ad5f5195bca2",
   "position": {
     "x": 506,
     "y": 92,
     "z": 21000,
-    "width": 420,
     "height": 64,
+    "width": 420,
     "tabOrder": 21000
   },
   "visual": {
@@ -82,7 +82,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
+                    "Name": "c",
                     "Entity": "Category",
                     "Type": 0
                   }
@@ -96,7 +96,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "c"
                                 }
                               },
                               "Property": "category_label"
