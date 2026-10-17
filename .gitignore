@@ -17,3 +17,6 @@ desktop.ini
 
 # Local helper scripts
 tools/
+
+# Power BI file with data (published as a GitHub release, not in git)
+*.pbix
