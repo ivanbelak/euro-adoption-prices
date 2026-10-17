@@ -1,7 +1,9 @@
 # Did the euro make Croatia more expensive?
 
-> 🚧 **Work in progress.** Data pipeline, database, event study, Power BI report and a placebo test
-> are done; a regression with confidence intervals is next.
+🇬🇧 English | [🇭🇷 Hrvatski](README.hr.md)
+
+> **Status:** data pipeline, database, event study, Power BI report and a placebo test are done;
+> a regression with confidence intervals is next.
 
 Croatia adopted the euro on 1 January 2023. Between December 2022 and August 2026, consumer
 prices in Croatia rose **19.0%**, compared with **10.7%** in the euro area (EA19, excluding Croatia).
@@ -127,9 +129,15 @@ so both are plain text and diff cleanly in git). Four pages:
 | **Croatia by category** | Which prices pulled away, and which of those are false alarms? |
 
 Slicers pick the adopter, the control, the **trend window** (±12 to ±48 months) and the category
-(17 headline aggregates such as services, goods, food and energy, plus COICOP levels 1–3, grouped by division).
-Measures are window-aware DAX (`SELECTEDVALUE`, `CALCULATE`, `AVERAGEX`), with 12-month trailing averages
-to remove seasonality. Opening it needs the database below; after opening, click **Refresh**.
+(all items, core inflation, services, goods, food, energy, non-energy industrial goods); the last page
+goes down to ~140 detailed categories. Measures are window-aware DAX (`SELECTEDVALUE`, `CALCULATE`,
+`AVERAGEX`) with 12-month trailing averages to remove seasonality, and always evaluate exactly one category.
+
+**Try it without a database:** download `EuroPrices.pbix` (data included) from the
+[latest release](https://github.com/ivanbelak/euro-adoption-prices/releases/latest) and open it in the free
+[Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/desktop) (Windows).
+The project files in `powerbi/` hold the report and model only; with them, build the database first
+(see *Running it*) and click **Refresh**.
 
 ## Pipeline
 
@@ -190,6 +198,14 @@ python notebooks/build_placebo_notebook.py   # re-runs the placebo test notebook
 
 Then open `powerbi/EuroPrices.pbip` in Power BI Desktop and click **Refresh** (the server and database
 are Power Query parameters, `SQL Server` and `SQL Database`).
+
+## Data sources
+
+- **Eurostat**, Harmonised Index of Consumer Prices, dataset
+  [`prc_hicp_minr`](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table) (© European Union,
+  reused under Eurostat's copyright policy).
+- **U.S. Bureau of Labor Statistics**, CPI for all urban consumers, not seasonally adjusted
+  ([`CPIAUCNS`](https://fred.stlouisfed.org/series/CPIAUCNS), via FRED).
 
 ## Tools
 
