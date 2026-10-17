@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "27b07f78875d5aa883d4",
   "position": {
     "x": 644,
-    "y": 172,
+    "y": 166,
     "z": 9000,
+    "height": 542,
     "width": 612,
-    "height": 528,
     "tabOrder": 9000
   },
   "visual": {
@@ -363,5 +363,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c2d9a598564627f28c26",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "event_month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9a016f6c5b6079d83021",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5f5edbc8309a0a47537c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess (trend-adjusted)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2422a3619164db8d5153",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess (12-month avg)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1d782aa3391aa3656563",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess (trend-adjusted, 12-month avg)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

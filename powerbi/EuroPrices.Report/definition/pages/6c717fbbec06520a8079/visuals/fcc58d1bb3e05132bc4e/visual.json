@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "fcc58d1bb3e05132bc4e",
   "position": {
-    "x": 876,
-    "y": 92,
+    "x": 620,
+    "y": 96,
     "z": 7000,
-    "width": 380,
-    "height": 64,
+    "width": 636,
+    "height": 60,
     "tabOrder": 7000
   },
   "visual": {
@@ -82,7 +82,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
+                    "Name": "c",
                     "Entity": "Category",
                     "Type": 0
                   }
@@ -96,7 +96,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "c"
                                 }
                               },
                               "Property": "category_label"
@@ -117,6 +117,13 @@
                   }
                 ]
               }
+            },
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -127,7 +134,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3527b3cfe42f5e56a7e3",
+        "name": "headlinecategories",
         "field": {
           "Column": {
             "Expression": {
@@ -135,7 +142,7 @@
                 "Entity": "Category"
               }
             },
-            "Property": "in_slicer"
+            "Property": "coicop_code"
           }
         },
         "type": "Categorical",
@@ -143,7 +150,7 @@
           "Version": 2,
           "From": [
             {
-              "Name": "s",
+              "Name": "c",
               "Entity": "Category",
               "Type": 0
             }
@@ -157,10 +164,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "s"
+                            "Source": "c"
                           }
                         },
-                        "Property": "in_slicer"
+                        "Property": "coicop_code"
                       }
                     }
                   ],
@@ -168,7 +175,49 @@
                     [
                       {
                         "Literal": {
-                          "Value": "true"
+                          "Value": "'TOTAL'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'TOT_X_NRG_FOOD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'SERV'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'GD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'FOOD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'NRG'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'IGD_NNRG'"
                         }
                       }
                     ]

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "3a7cae80ad5f5195bca2",
   "position": {
-    "x": 506,
-    "y": 92,
+    "x": 190,
+    "y": 96,
     "z": 21000,
-    "height": 64,
-    "width": 420,
+    "height": 60,
+    "width": 560,
     "tabOrder": 21000
   },
   "visual": {
@@ -117,6 +117,13 @@
                   }
                 ]
               }
+            },
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -127,7 +134,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "15404c14e3c85b239f49",
+        "name": "headlinecategories",
         "field": {
           "Column": {
             "Expression": {
@@ -135,7 +142,7 @@
                 "Entity": "Category"
               }
             },
-            "Property": "in_slicer"
+            "Property": "coicop_code"
           }
         },
         "type": "Categorical",
@@ -143,7 +150,7 @@
           "Version": 2,
           "From": [
             {
-              "Name": "s",
+              "Name": "c",
               "Entity": "Category",
               "Type": 0
             }
@@ -157,10 +164,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "s"
+                            "Source": "c"
                           }
                         },
-                        "Property": "in_slicer"
+                        "Property": "coicop_code"
                       }
                     }
                   ],
@@ -168,7 +175,49 @@
                     [
                       {
                         "Literal": {
-                          "Value": "true"
+                          "Value": "'TOTAL'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'TOT_X_NRG_FOOD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'SERV'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'GD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'FOOD'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'NRG'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'IGD_NNRG'"
                         }
                       }
                     ]

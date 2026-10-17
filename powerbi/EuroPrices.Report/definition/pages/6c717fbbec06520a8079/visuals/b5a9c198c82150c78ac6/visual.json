@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "b5a9c198c82150c78ac6",
   "position": {
-    "x": 458,
-    "y": 92,
+    "x": 468,
+    "y": 96,
     "z": 5000,
-    "width": 130,
-    "height": 64,
+    "height": 60,
+    "width": 140,
     "tabOrder": 5000
   },
   "visual": {
@@ -123,5 +123,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "249db808539295a379fe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Window"
+              }
+            },
+            "Property": "label"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,6 +1,17 @@
 table Category
 	lineageTag: 094bd99a-6be0-52a2-bd4a-8dfad84ad10a
 
+	/// The one category the report shows. Picking a whole group in the hierarchy slicer selects
+	/// several categories; then this is the group's top level (a COICOP division, or All items
+	/// for Headline indicators), so measures never average unrelated price indices
+	measure 'Selected category code' = IF(HASONEVALUE('Category'[coicop_code]), VALUES('Category'[coicop_code]), VAR lvl = MIN('Category'[category_level]) RETURN CALCULATE(MIN('Category'[coicop_code]), 'Category'[category_level] = lvl))
+		isHidden
+		lineageTag: d1a2828b-3ef2-47de-ae55-c7429cef07ce
+
+	/// Name of the category the report shows
+	measure 'Selected category' = VAR cat = [Selected category code] RETURN CALCULATE(MIN('Category'[category_label]), REMOVEFILTERS('Category'), 'Category'[coicop_code] = cat)
+		lineageTag: a2304e1b-1358-4916-a1a5-c7707bc4b8ad
+
 	column coicop_code
 		dataType: string
 		lineageTag: 85f2f319-d813-5926-86f0-214885b5bab7
