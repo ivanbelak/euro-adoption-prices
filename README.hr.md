@@ -1,4 +1,4 @@
-# Je li nas euro poskupio?
+# Je li uvođenje eura podiglo cijene u Hrvatskoj?
 
 [🇬🇧 English](README.md) | 🇭🇷 Hrvatski
 
