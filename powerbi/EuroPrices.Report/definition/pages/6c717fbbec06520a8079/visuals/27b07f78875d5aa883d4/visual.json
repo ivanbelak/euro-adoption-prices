@@ -328,7 +328,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Above 0 = faster than the control. The dark line is the estimated euro effect.'"
+                  "Value": "'Above 0 = faster than the control. Dark line = euro effect.'"
                 }
               }
             }

@@ -147,6 +147,19 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -183,7 +196,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Averages over the months after adoption in the window. Total = estimated euro effect.'"
+                  "Value": "'Average after adoption. Total = estimated euro effect.'"
                 }
               }
             }

@@ -260,7 +260,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Prices: adopter vs control (100 = month before the euro)'"
+                  "Value": "'Prices (100 = month before the euro)'"
                 }
               }
             }
