@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Event Study.Excess after 1 year",
-              "nativeQueryRef": "Excess after 1 year"
+              "nativeQueryRef": "Gap after 1 year",
+              "displayName": "Gap after 1 year"
             }
           ]
         }
@@ -83,7 +84,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Excess after 1 year (index points)'"
+                  "Value": "'Gap after 1 year (index points)'"
                 }
               }
             }

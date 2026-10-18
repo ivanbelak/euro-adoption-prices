@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Month 0 = euro adoption. Both lines are 100 in the month before. Excess = adopter minus control.",
+                    "value": "Month 0 = euro adoption. Both lines are 100 in the month before. Gap = how much more prices rose than in the control.",
                     "textStyle": {
                       "fontSize": "11pt",
                       "color": "#605E5C"

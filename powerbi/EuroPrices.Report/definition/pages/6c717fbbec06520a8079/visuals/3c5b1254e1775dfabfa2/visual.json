@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Event Study.Adopter index",
-              "nativeQueryRef": "Adopter index"
+              "nativeQueryRef": "Adopter",
+              "displayName": "Adopter"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "Event Study.Control index",
-              "nativeQueryRef": "Control index"
+              "nativeQueryRef": "Control",
+              "displayName": "Control"
             }
           ]
         }
@@ -258,7 +260,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Prices: adopter vs control'"
+                  "Value": "'Prices: adopter vs control (100 = month before the euro)'"
                 }
               }
             }

@@ -67,7 +67,8 @@
                 }
               },
               "queryRef": "Event Study.Excess after 1 year (trend-adjusted)",
-              "nativeQueryRef": "Excess after 1 year (trend-adjusted)"
+              "nativeQueryRef": "Gap beyond the pre-euro trend, after 1 year",
+              "displayName": "Gap beyond the pre-euro trend, after 1 year"
             }
           ]
         }
@@ -87,7 +88,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Excess after 1 year, trend-adjusted'"
+                  "Value": "'Gap beyond the pre-euro trend, after 1 year'"
                 }
               }
             }

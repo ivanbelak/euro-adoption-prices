@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "Event Study.Excess (12-month avg)",
-              "nativeQueryRef": "12-month avg",
-              "displayName": "12-month avg"
+              "nativeQueryRef": "Gap",
+              "displayName": "Gap"
             },
             {
               "field": {
@@ -61,8 +61,8 @@
                 }
               },
               "queryRef": "Event Study.Excess (trend-adjusted, 12-month avg)",
-              "nativeQueryRef": "12-month avg, trend-adjusted",
-              "displayName": "12-month avg, trend-adjusted"
+              "nativeQueryRef": "Gap beyond the pre-euro trend",
+              "displayName": "Gap beyond the pre-euro trend"
             }
           ]
         },
@@ -120,7 +120,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Excess, 12-month avg'"
+                  "Value": "'Gap (index points)'"
                 }
               }
             }
@@ -221,7 +221,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E66C37'"
+                      "Value": "'#1B9E77'"
                     }
                   }
                 }
@@ -239,7 +239,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             }
@@ -253,13 +253,61 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Event Study.Excess (trend-adjusted, 12-month avg)"
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8A8886'"
+                    }
+                  }
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
           }
         }
       ]
@@ -278,7 +326,27 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Excess by adopter, 12-month average (index points)'"
+                  "Value": "'How much faster did prices rise than in the control? (12-month averages)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Above 0 = prices rose faster than in the control. A step up in the green line after month 0 = a euro effect.'"
                 }
               }
             }
