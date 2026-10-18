@@ -14,6 +14,10 @@ drugačija - gledajući svih šest zemalja, u prvoj godini eura poskupjele su ok
 zemalja. Za samu Hrvatsku efekt je
 istog smjera, ali je teško reći koliko je točno velik, jer je euro uveden usred inflacijskog vala 2022.
 
+U izvještaju se rast cijena rastavlja na tri dijela: koliko su cijene porasle u usporednim zemljama u
+isto vrijeme (opća inflacija), koliko je Hrvatska ionako rasla brže i prije eura, te ono što ostaje -
+procjena efekta eura.
+
 Kod usluga se efekt najjasnije vidi tamo gdje se plaća sitno i često: restorani i kafići, menze, frizeri,
 rekreacija i sport te popravci kućanskih aparata. Te usluge poskupjele su više nego u usporednim zemljama u
 gotovo svih šest zemalja, u prosjeku za 2 do 3 boda. Kod telekomunikacija (mobitel, internet), gdje cijene

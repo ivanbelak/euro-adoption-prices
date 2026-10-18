@@ -15,6 +15,10 @@ countries in the first year of the euro.
 For Croatia alone the effect goes the same way, but it is hard to say exactly how big it is, because the euro
 came in the middle of the 2022 inflation wave.
 
+The report splits the price rise into three parts: how much prices rose in the comparison countries at
+the same time (general inflation), how much faster Croatia was already rising before the euro, and what is
+left - the estimated euro effect.
+
 With services, the effect is clearest where people pay small amounts often: restaurants and cafés, canteens,
 hairdressers, recreation and sport, and household appliance repairs. These rose more than in the comparison
 countries in almost all six countries, by 2 to 3 points on average. For telecoms (mobile, internet), where

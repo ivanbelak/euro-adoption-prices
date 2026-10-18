@@ -39,6 +39,42 @@ on how the pre-euro trend is measured.
 4. **Smooth the tourist season.** Croatian services jump every summer, so the headline number compares
    the average excess over the first year of the euro (months 0–11) with the year before (months −12 to −1).
 
+### Reading the breakdown
+
+The first page of the report splits the price rise into three parts. For Croatian services against the euro
+area, averaged over the first 24 months of the euro:
+
+| | Index points |
+|---|---|
+| Price rise in Croatia | +10.8 |
+| minus the price rise in the control over the same months | −5.0 |
+| minus the pre-euro trend | −3.4 |
+| **= estimated euro effect** | **+2.4** |
+
+An analogy: you got a 10% raise. Everyone in the company got 5% for inflation, and you have always got about
+3% more than the average, promotion or not. What the promotion itself added is about 10 − 5 − 3 = 2%.
+
+- **The control** removes what happened to everyone *at the same time*: the energy crisis, interest rates,
+  global supply problems.
+- **The pre-euro trend** removes what Croatia was *already doing before*: rising faster than the euro area as
+  a catching-up economy with fast wage growth and booming tourism.
+
+**Nothing is subtracted twice.** The trend is fitted to the *gap* between Croatia and the control before the
+euro, not to Croatia's own price rise, so general inflation is already out of it. If Croatia and the control
+had both risen 5% a year before the euro, the gap would be flat and the trend bar would be zero. The three
+steps add up exactly.
+
+**Where it can go wrong** is the line between the trend and the euro:
+- *Anticipation.* Prices were shown in euros from September 2022. Any rounding before January 2023 sits in the
+  period the trend is fitted on, so part of the euro effect ends up in the trend bar and the estimate is too low.
+- *Temporary shocks that look like a trend.* A gap that opened for a temporary reason (for example, the 2022
+  energy crisis hitting countries differently) is extended into the future as if it were permanent. Against
+  the non-euro peers, whose own 2022 inflation surge was larger, the trend bar even turns positive: Croatia was
+  expected to keep falling behind, and did not.
+
+The **Control** slicer changes the second bar and the **Window** slicer the third (how many pre-euro months the
+trend is fitted on), so the report shows directly how much the answer depends on each choice.
+
 ### Services: the euro effect, by adopter and control
 
 Trend-adjusted change in excess, first year of the euro vs the year before (index points, 24-month trend window):

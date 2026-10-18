@@ -39,6 +39,41 @@ a veličina se kreće od oko +0,3 do +4 boda, ovisno o kontrolnoj skupini i nač
 4. **Izglađivanje turističke sezone:** usluge u Hrvatskoj poskupe svako ljeto, pa glavni broj uspoređuje
    prosječni višak u prvoj godini eura (mjeseci 0–11) s godinom prije (mjeseci −12 do −1).
 
+### Kako čitati rastavu
+
+Prva stranica izvještaja rastavlja rast cijena na tri dijela. Za usluge u Hrvatskoj u odnosu na europodručje,
+u prosjeku prva 24 mjeseca eura:
+
+| | Bodovi indeksa |
+|---|---|
+| Rast cijena u Hrvatskoj | +10,8 |
+| minus rast cijena u kontroli u istim mjesecima | −5,0 |
+| minus trend prije eura | −3,4 |
+| **= procjena efekta eura** | **+2,4** |
+
+Usporedba: dobio si povišicu od 10 %. Svi u firmi dobili su 5 % zbog inflacije, a ti inače dobivaš oko 3 % više
+od prosjeka, s promaknućem ili bez njega. Ono što je dodalo samo promaknuće je oko 10 − 5 − 3 = 2 %.
+
+- **Kontrola** oduzima ono što se *u isto vrijeme* događalo svima: energetsku krizu, kamate, globalne probleme
+  s dobavom.
+- **Trend prije eura** oduzima ono što je Hrvatska *radila i prije*: rasla je brže od europodručja kao
+  gospodarstvo koje sustiže razvijenije, s brzim rastom plaća i turizma.
+
+**Ništa se ne oduzima dvaput.** Trend se računa iz *razlike* između Hrvatske i kontrole prije eura, a ne iz
+samog rasta cijena u Hrvatskoj, pa je opća inflacija već izbačena. Da su i Hrvatska i kontrola prije eura rasle
+po 5 % godišnje, razlika bi bila ravna i stupac trenda bio bi nula. Tri koraka se točno zbrajaju.
+
+**Gdje može pogriješiti** je granica između trenda i eura:
+- *Efekt najave.* Cijene su se u eurima iskazivale od rujna 2022. Svako zaokruživanje prije siječnja 2023. pada
+  u razdoblje iz kojeg se računa trend, pa dio efekta eura završi u stupcu trenda i procjena je preniska.
+- *Privremeni šokovi koji izgledaju kao trend.* Razlika nastala iz privremenog razloga (npr. energetska kriza
+  2022. koja je zemlje pogodila različito) produži se u budućnost kao da je trajna. U odnosu na susjede bez eura,
+  čiji je vlastiti inflacijski skok 2022. bio veći, stupac trenda postane čak pozitivan: očekivalo se da će
+  Hrvatska i dalje zaostajati, a nije.
+
+Slicer **Control** mijenja drugi stupac, a slicer **Window** treći (iz koliko mjeseci prije eura se računa
+trend), pa izvještaj izravno pokazuje koliko odgovor ovisi o svakom od tih izbora.
+
 ### Usluge: efekt eura po zemlji i kontroli
 
 Promjena viška nakon uklanjanja trenda, prva godina eura u odnosu na godinu prije (bodovi indeksa, prozor
