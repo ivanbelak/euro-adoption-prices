@@ -22,12 +22,12 @@ table 'Event Study'
 		lineageTag: 08b1917b-8be6-5b1b-9f56-96b9e00b950f
 
 	/// Average excess over the last 12 months; removes the summer tourist season. At month 11 it is the average over the first year of the euro
-	measure 'Excess (12-month avg)' = VAR w = SELECTEDVALUE('Window'[months], 24) VAR t = MAX('Event Study'[event_month]) RETURN IF(NOT ISBLANK(t) && ABS(t) <= w && t >= -37, CALCULATE([Excess], 'Event Study'[event_month] > t - 12, 'Event Study'[event_month] <= t))
+	measure 'Excess (12-month avg)' = VAR w = SELECTEDVALUE('Window'[months], 24) VAR t = MAX('Event Study'[event_month]) RETURN IF(NOT ISBLANK(t) && ABS(t) <= w && t - 11 >= -w, CALCULATE([Excess], 'Event Study'[event_month] > t - 12, 'Event Study'[event_month] <= t))
 		formatString: 0.0
 		lineageTag: 7612d5b2-56e1-5f9e-80c2-034097785146
 
 	/// Trend-adjusted excess averaged over the last 12 months
-	measure 'Excess (trend-adjusted, 12-month avg)' = VAR w = SELECTEDVALUE('Window'[months], 24) VAR t = MAX('Event Study'[event_month]) RETURN IF(NOT ISBLANK(t) && ABS(t) <= w && t >= -37, CALCULATE([Excess (trend-adjusted)], 'Event Study'[event_month] > t - 12, 'Event Study'[event_month] <= t))
+	measure 'Excess (trend-adjusted, 12-month avg)' = VAR w = SELECTEDVALUE('Window'[months], 24) VAR t = MAX('Event Study'[event_month]) RETURN IF(NOT ISBLANK(t) && ABS(t) <= w && t - 11 >= -w, CALCULATE([Excess (trend-adjusted)], 'Event Study'[event_month] > t - 12, 'Event Study'[event_month] <= t))
 		formatString: 0.0
 		lineageTag: 3dfd2683-3013-5963-8ac0-ec765e30b167
 

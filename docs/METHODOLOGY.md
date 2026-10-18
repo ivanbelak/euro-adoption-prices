@@ -141,10 +141,11 @@ by chance; the analysis therefore leans on services as a whole, which theory poi
 ## Power BI report
 
 [`powerbi/EuroPrices.pbip`](../powerbi/) (Power BI Project format: the model is TMDL and the report is PBIR,
-so both are plain text and diff cleanly in git). Four pages:
+so both are plain text and diff cleanly in git). Five pages:
 
 | Page | Question |
 |---|---|
+| **Start here** | What is compared, what each page shows, how to read the filters |
 | **Croatia vs control** | What happened to prices around adoption, for one adopter against one control? |
 | **All adopters** | Does the same pattern repeat in every adoption? (small multiples) |
 | **Robustness** | Does the result survive a different control? (adopter × control matrix) |

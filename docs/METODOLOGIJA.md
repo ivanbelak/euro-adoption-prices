@@ -145,10 +145,11 @@ predvidjela unaprijed.
 ## Power BI izvještaj
 
 [`powerbi/EuroPrices.pbip`](../powerbi/) (format Power BI Project: model je u TMDL-u, a izvještaj u PBIR-u, pa su
-oboje običan tekst koji git uredno prati). Četiri stranice (na engleskom):
+oboje običan tekst koji git uredno prati). Pet stranica (na engleskom):
 
 | Stranica | Pitanje |
 |---|---|
+| **Start here** | Što se uspoređuje, što pokazuje koja stranica, kako čitati filtere |
 | **Croatia vs control** | Što se dogodilo s cijenama oko uvođenja eura, za jednu zemlju u odnosu na jednu kontrolu? |
 | **All adopters** | Ponavlja li se isti obrazac kod svake zemlje? (mali grafovi po zemljama) |
 | **Robustness** | Vrijedi li rezultat i uz drugu kontrolu? (matrica zemlja × kontrola) |
