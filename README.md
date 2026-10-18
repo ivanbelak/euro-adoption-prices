@@ -5,11 +5,11 @@
 I made this project mainly as practice in Power BI, SQL and Python. I picked the topic as a test of my own
 naivety - I believed prices would not rise significantly just because of the euro.
 
-I wanted to know how much of the price rise in Croatia was caused by the euro, and how much was general
-inflation. So I compared it with price growth in the euro area, and also in similar countries that did not
-adopt the euro. As an extra task, I did the same for the 5 other countries that adopted the euro since 2007.
+I wanted to separate the effect of the euro from general inflation. I compared Croatia's price growth with
+the euro area (EA19), but also with similar countries that haven't switched to the euro. As an extra, I ran the
+same comparison for the five other countries that have adopted the euro since 2007.
 
-As for goods, maybe I wasn't that naive after all - there is no significant effect. For services, though,
+As for goods, maybe I wasn't that naive after all - there appears to be no significant effect. For services, though,
 it's a different story - across all six countries, they rose about 1.5 points more than in the comparison
 countries in the first year of the euro.
 For Croatia alone the effect goes the same way, but it is hard to say exactly how big it is, because the euro
