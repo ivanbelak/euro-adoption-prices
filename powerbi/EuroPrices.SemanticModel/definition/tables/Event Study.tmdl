@@ -41,6 +41,31 @@ table 'Event Study'
 		formatString: 0.0
 		lineageTag: 3765fe52-a30c-557b-a0d8-5273882c2178
 
+	/// Average price rise in the adopter over the months after adoption in the selected window (month -1 = 100)
+	measure 'Adopter price rise, after adoption' = VAR w = SELECTEDVALUE('Window'[months], 24) RETURN CALCULATE([Adopter index], 'Event Study'[event_month] >= 0, 'Event Study'[event_month] < w) - 100
+		formatString: 0.0
+		lineageTag: 954008c1-e46f-5c36-be63-ab8b2499dfb8
+
+	/// Average price rise in the control over the same months
+	measure 'Control price rise, after adoption' = VAR w = SELECTEDVALUE('Window'[months], 24) RETURN CALCULATE([Control index], 'Event Study'[event_month] >= 0, 'Event Study'[event_month] < w) - 100
+		formatString: 0.0
+		lineageTag: f159ac51-45ed-5af9-ab58-c19ff826a7f4
+
+	/// Average gap beyond the pre-euro trend over the months after adoption in the selected window
+	measure 'Estimated euro effect, after adoption' = VAR w = SELECTEDVALUE('Window'[months], 24) RETURN CALCULATE([Excess (trend-adjusted)], 'Event Study'[event_month] >= 0, 'Event Study'[event_month] < w)
+		formatString: 0.0
+		lineageTag: b6bab63d-61fd-55b5-be07-c8b66ba21308
+
+	/// The part of the gap that the pre-euro trend already explains
+	measure 'Pre-euro trend, after adoption' = [Adopter price rise, after adoption] - [Control price rise, after adoption] - [Estimated euro effect, after adoption]
+		formatString: 0.0
+		lineageTag: bdf11fc2-d10a-5dc0-85dc-7869c9dcb9b8
+
+	/// Waterfall steps: adopter rise, minus control rise, minus pre-euro trend; the total is the euro effect
+	measure 'Breakdown value' = SWITCH(SELECTEDVALUE('Breakdown step'[step_order]), 1, [Adopter price rise, after adoption], 2, -[Control price rise, after adoption], 3, -[Pre-euro trend, after adoption])
+		formatString: 0.0
+		lineageTag: 3f1c6d4d-6c2f-56c8-a984-f27b1407edbf
+
 	column country_code
 		dataType: string
 		isHidden

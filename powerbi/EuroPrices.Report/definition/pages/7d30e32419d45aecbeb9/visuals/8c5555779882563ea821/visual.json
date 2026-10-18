@@ -57,7 +57,7 @@
                     }
                   },
                   {
-                    "value": " - prices in one country against one comparison group, and the gap between them (excess). The green line is the gap beyond the pre-euro trend: a step up after month 0 is a euro effect.",
+                    "value": " - prices in one country against one comparison group, and the gap between them (excess). The dark orange line is the estimated euro effect: the gap that the pre-euro trend does not explain. A step up after month 0 is a euro effect. The breakdown on the right shows how it is worked out for the months after adoption in the selected window.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }

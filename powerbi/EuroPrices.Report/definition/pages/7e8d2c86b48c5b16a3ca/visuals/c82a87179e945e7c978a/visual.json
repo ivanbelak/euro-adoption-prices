@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "Event Study.Excess (12-month avg)",
-              "nativeQueryRef": "Gap",
-              "displayName": "Gap"
+              "nativeQueryRef": "Adopter minus control",
+              "displayName": "Adopter minus control"
             },
             {
               "field": {
@@ -61,8 +61,8 @@
                 }
               },
               "queryRef": "Event Study.Excess (trend-adjusted, 12-month avg)",
-              "nativeQueryRef": "Gap beyond the pre-euro trend",
-              "displayName": "Gap beyond the pre-euro trend"
+              "nativeQueryRef": "Estimated euro effect",
+              "displayName": "Estimated euro effect"
             }
           ]
         },
@@ -203,7 +203,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3B5B92'"
+                      "Value": "'#F4B89C'"
                     }
                   }
                 }
@@ -221,7 +221,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1B9E77'"
+                      "Value": "'#C8501F'"
                     }
                   }
                 }
@@ -239,7 +239,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "2L"
                 }
               }
             }
@@ -253,7 +253,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "4L"
                 }
               }
             }
@@ -346,7 +346,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Above 0 = prices rose faster than in the control. A step up in the green line after month 0 = a euro effect.'"
+                  "Value": "'Above 0 = faster than the control. The dark line is the estimated euro effect.'"
                 }
               }
             }

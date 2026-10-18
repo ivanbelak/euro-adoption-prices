@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["SQL Server","SQL Database","Event Study","Pre Trend","Window","Adopter","Control","Category"]
+annotation PBI_QueryOrder = ["SQL Server","SQL Database","Event Study","Pre Trend","Window","Adopter","Control","Category","Breakdown step"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -18,6 +18,7 @@ ref table Window
 ref table Adopter
 ref table Control
 ref table Category
+ref table 'Breakdown step'
 
 ref cultureInfo en-US
 

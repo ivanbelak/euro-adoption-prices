@@ -1,0 +1,32 @@
+table 'Breakdown step'
+	lineageTag: 403d3d7b-eae2-5ed6-aaf1-1397776c73a4
+
+	column step_order
+		dataType: int64
+		isHidden
+		lineageTag: edc62b15-5fdb-5c21-a50e-0fffa679f4a8
+		summarizeBy: none
+		sourceColumn: step_order
+
+		annotation SummarizationSetBy = User
+
+	column step
+		dataType: string
+		lineageTag: 35033408-e332-5b01-bcc8-a1d052a86cf4
+		summarizeBy: none
+		sourceColumn: step
+		sortByColumn: step_order
+
+		annotation SummarizationSetBy = User
+
+	partition 'Breakdown step' = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [step_order = Int64.Type, step = text], {
+				        {1, "Adopter price rise"}, {2, "minus control price rise"}, {3, "minus pre-euro trend"}})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
