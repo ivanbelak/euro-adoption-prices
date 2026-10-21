@@ -26,8 +26,12 @@ hairdressers, recreation and sport, and household appliance repairs. These rose 
 countries in almost all six countries, by 2 to 3 points on average. For telecoms (mobile, internet), where
 prices are set by large companies, there is no effect.
 
-Along the way I had to correct my conclusion a few times: the first result looked clearer than it really
-was, until I added a second comparison group and a test with "fake" adoption dates.
+Along the way I had to correct my conclusion a few times. Compared with the euro area alone, it first looked as
+if services in Croatia rose a full 4 points more because of the euro. Once I took into account that Croatia was
+already rising faster than the euro area before the euro, and added a comparison with similar countries without
+the euro, that number dropped to between 0 and 2 points, depending on the comparison. Finally I ran a test with
+"fake" euro adoption dates, and for Croatia alone the effect turned out to be on the edge of statistical
+significance.
 
 I wrote the code with help from [Claude Code](https://claude.com/claude-code).
 

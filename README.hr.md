@@ -25,8 +25,11 @@ rekreacija i sport te popravci kućanskih aparata. Te usluge poskupjele su više
 gotovo svih šest zemalja, u prosjeku za 2 do 3 boda. Kod telekomunikacija (mobitel, internet), gdje cijene
 određuju velike tvrtke, efekta nema.
 
-Usput sam nekoliko puta morao korigirati zaključak: prvi rezultat je izgledao jasnije nego što jest, sve dok
-nisam dodao drugu usporednu skupinu i provjeru s "lažnim" datumima uvođenja eura.
+Usput sam nekoliko puta morao korigirati zaključak. U usporedbi samo s eurozonom, na početku je izgledalo da su
+usluge u Hrvatskoj zbog eura poskupjele čak 4 boda više. Kad sam uzeo u obzir da je Hrvatska i prije eura rasla
+brže od eurozone te dodao usporedbu sa sličnim zemljama bez eura, ta se brojka smanjila na između 0 i 2 boda,
+ovisno o usporedbi. Na kraju sam napravio i provjeru s "lažnim" datumima uvođenja eura, i za samu Hrvatsku efekt
+je ispao na granici statističke značajnosti.
 
 Kod sam pisao uz pomoć [Claude Codea](https://claude.com/claude-code).
 
