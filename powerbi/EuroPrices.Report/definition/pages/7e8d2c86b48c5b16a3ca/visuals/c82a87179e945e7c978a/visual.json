@@ -120,7 +120,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gap (index points)'"
+                  "Value": "'Gap, 12-month average'"
                 }
               }
             }
