@@ -9,7 +9,9 @@ Zanimalo me koliko je rast cijena u Hrvatskoj bio posljedica uvođenja eura, a k
 inflacije. Zato sam ga usporedio s rastom cijena u eurozoni, ali i u sličnim zemljama koje nisu uvele euro.
 Kao dodatni zadatak, isto sam napravio i za 5 ostalih država koje su uvele euro od 2007.
 
-Što se tiče dobara, možda i nisam bio tako naivan - ne vidi se značajan efekt. Međutim, kod usluga je priča
+Što se tiče dobara, možda i nisam bio tako naivan. U usporedbi s eurozonom vidi se mali porast (oko 1 bod,
+statistički neznačajan), koji bi mogao biti i posljedica toga što Hrvatska sustiže razvijenije zemlje, pa joj
+plaće i cijene rastu brže. U usporedbi sa sličnim zemljama bez eura tog porasta nema. Međutim, kod usluga je priča
 drugačija - gledajući svih šest zemalja, u prvoj godini eura poskupjele su oko 1,5 bod više od usporednih
 zemalja. Za samu Hrvatsku efekt je
 istog smjera, ali je teško reći koliko je točno velik, jer je euro uveden usred inflacijskog vala 2022.

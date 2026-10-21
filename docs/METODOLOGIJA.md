@@ -23,7 +23,7 @@ SAD (indeks potrošačkih cijena s FRED-a) služi samo kao globalni kontekst.
 godini eura poskupjele više nego u kontrolnim skupinama, i to otprilike 0,3 do 3,4 boda indeksa nakon
 uklanjanja prethodnog trenda. U prosjeku svih šest zemalja to je oko **+1,5 boda, više nego što pokaže 97 %
 "lažnih" datuma uvođenja** u odnosu na europodručje (90 % u odnosu na susjede bez eura). Kod **dobara** i
-**ukupnih cijena** nema ničeg većeg od šuma. Za **samu Hrvatsku** smjer se poklapa, ali je dokaz na granici,
+**ukupnih cijena** nema statistički značajnog efekta. Za **samu Hrvatsku** smjer se poklapa, ali je dokaz na granici,
 a veličina se kreće od oko +0,3 do +4 boda, ovisno o kontrolnoj skupini i načinu mjerenja trenda prije eura.
 
 ### Metoda
@@ -120,19 +120,20 @@ Isti izračun za svaku kategoriju usluga koja ima podatke za barem pet od šest 
 
 Efekt je najjasniji tamo gdje se plaća sitno i često, a usluge pružaju mali obrti; nema ga tamo gdje cijene
 određuju velike tvrtke ili država. Avionske karte imaju najveći prosjek, ali jako skaču (za Hrvatsku +39 u
-odnosu na europodručje), pa su izostavljene kao šum. Tablica je opisna: kad se odjednom uspoređuje ~40
+odnosu na europodručje), pa su izostavljene kao nepouzdane. Tablica je opisna: kad se odjednom uspoređuje ~40
 kategorija usluga, neke će slučajno izgledati velike, a placebo test po kategorijama nije rađen. Zato je broj
 zemalja bolje mjerilo od prosjeka.
 
-### Je li to više od šuma? Placebo test
+### Je li to više od slučajnosti? Placebo test
 
-Svaka metoda primijenjena na "bučne" mjesečne podatke izbaci *neki* broj. Da bi se taj šum izmjerio, isti
+Svaka metoda primijenjena na mjesečne podatke koji jako skaču izbaci *neki* broj. Da bi se izmjerilo koliko od
+toga daje sama slučajnost, isti
 izračun pokreće se za **lažne datume uvođenja eura**: svaki mjesec od 18 do 240 mjeseci prije pravog, koliko
 god podaci sežu. Razmak od 18 mjeseci drži lažnu "godinu nakon" podalje od mjeseci kad su cijene već bile
 istaknute u eurima. Vidi [`notebooks/01_placebo_test.ipynb`](../notebooks/01_placebo_test.ipynb) (na engleskom).
 
 Zemlja po zemlja test je slab (lažne procjene za Latviju kreću se od −10 do +6, kroz krizu 2008.–2010.).
-Kad se usrednji šest zemalja, šum se djelomično poništi, a pravi efekt prelaska na euro ne bi smio:
+Kad se usrednji šest zemalja, slučajna odstupanja se djelomično ponište, a pravi efekt prelaska na euro ne bi smio:
 
 | Prosjek šest zemalja | Pravi | 90 % lažnih prosjeka | p |
 |---|---|---|---|

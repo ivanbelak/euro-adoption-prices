@@ -23,7 +23,7 @@ The US (CPI from FRED) is included as global context only.
 the controls during the first year of the euro, by roughly 0.3 to 3.4 index points once
 pre-existing trends are removed. Averaged over the six adoptions that is about **+1.5 points, more than
 97% of fake adoption dates produce** against the euro area (90% against the non-euro peers).
-**Goods** and **all items** show nothing beyond the noise. For **Croatia** alone the direction matches but
+**Goods** and **all items** show no statistically significant effect. For **Croatia** alone the direction matches but
 the evidence is borderline, and the size ranges from about +0.3 to +4 points depending on the control and
 on how the pre-euro trend is measured.
 
@@ -120,19 +120,20 @@ The same step, computed for each service category with data in at least five of 
 
 The effect is clearest where people pay small amounts often and the sellers are small businesses; it is
 absent where prices are set by large companies or the state. Air fares have the largest average but swing
-wildly (Croatia +39 against the euro area), so they are left out as noise. This table is descriptive: with
+wildly (Croatia +39 against the euro area), so they are left out as unreliable. This table is descriptive: with
 ~40 service categories compared at once some will look large by chance, and no placebo test was run per
 category, which is why the count of adoptions is a better guide than the average.
 
-### Is it more than noise? A placebo test
+### Is it more than chance? A placebo test
 
-Any method applied to noisy monthly data reports *some* number. To measure that noise, the same calculation is
+Any method applied to monthly data that jumps around reports *some* number. To measure how much of it chance
+alone produces, the same calculation is
 run for **fake adoption dates**: every month from 18 to 240 months before the real one, as far back as the data
 goes. The 18-month gap keeps the fake "year after" clear of the months when prices were already shown in euros.
 See [`notebooks/01_placebo_test.ipynb`](../notebooks/01_placebo_test.ipynb).
 
 One country at a time the test is weak (Latvia's fake estimates range from −10 to +6, through the 2008-10 crisis).
-Averaged over the six adoptions, the noise partly cancels while a genuine changeover effect should not:
+Averaged over the six adoptions, random swings partly cancel out while a genuine changeover effect should not:
 
 | Average of six adoptions | Real | 90% of fake averages | p |
 |---|---|---|---|

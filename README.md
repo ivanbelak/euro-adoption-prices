@@ -9,7 +9,9 @@ I wanted to separate the effect of the euro from general inflation. I compared C
 the euro area (EA19), but also with similar countries that haven't switched to the euro. As an extra, I ran the
 same comparison for the five other countries that have adopted the euro since 2007.
 
-As for goods, maybe I wasn't that naive after all - there appears to be no significant effect. For services, though,
+As for goods, maybe I wasn't that naive after all. Against the euro area there is a small rise (about 1 point,
+not statistically significant), which could also come from Croatia catching up with richer countries, with wages
+and prices rising faster. Against similar countries without the euro, it doesn't show up. For services, though,
 it's a different story - across all six countries, they rose about 1.5 points more than in the comparison
 countries in the first year of the euro.
 For Croatia alone the effect goes the same way, but it is hard to say exactly how big it is, because the euro

@@ -21,12 +21,12 @@ The event study (`sql/05`, `sql/07`, and the Power BI report) estimates how much
 first year of the euro than in a control, after removing the pre-existing trend. For services in Croatia
 that is **+1.8 index points against the euro area** and **+0.3 against the non-euro peers**.
 
-But how big is "big"? Any method applied to noisy monthly data produces *some* number. A placebo test measures
-that noise directly: **run exactly the same calculation for fake adoption dates**, when nothing special happened,
+But how big is "big"? Any method applied to monthly data that jumps around produces *some* number. A placebo test measures
+how much of it chance alone produces: **run exactly the same calculation for fake adoption dates**, when nothing special happened,
 and see what the method reports.
 
 - If fake dates give numbers near zero and the real date stands out, the effect is real.
-- If fake dates give numbers just as large, the real estimate is within the noise.
+- If fake dates give numbers just as large, the real estimate could be chance.
 
 **Design**
 - Fake dates: every month from 18 to 240 months before the real adoption, as far back as the data allows
@@ -117,7 +117,7 @@ plt.show()"""),
     md("""The fake effects for Croatia mostly stay within ±2 points (86-89% of them); the largest, around ±3,
 come from fake dates in 2003, 2005 and late 2010. Against the euro area the real +1.8 is larger than all but
 ~7% of fake dates (p ≈ 0.07): close to, but not below, the usual 5% threshold. Against the non-euro peers the
-real +0.3 is well inside the noise."""),
+real +0.3 is well within what chance alone produces."""),
 
     md("""## 3. Every adopter
 
@@ -142,7 +142,7 @@ through the 2008-10 crisis, when their prices swung far more than the euro area'
 
 ## 4. All six adoptions together
 
-A single country's estimate is noisy, but the noise is different in every country while a genuine changeover
+A single country's estimate swings a lot, but the swings differ from country to country while a genuine changeover
 effect should push all of them the same way. So the stronger test is on the **average** step across the six
 adoptions: draw one fake date per adopter at random, average the six fake steps, repeat 10,000 times, and compare
 the real average with that distribution."""),
@@ -181,17 +181,17 @@ plt.show()"""),
 - **Services: a real but modest effect across adoptions.** Averaged over the six adoptions, services rose
   about 1.5 points more than in the controls in the first year of the euro. That is larger than 97% of fake
   dates against the euro area (p ≈ 0.03) and 90% against the non-euro peers (p ≈ 0.10).
-- **Goods and all items: nothing beyond the noise.** This is the pattern the rounding story predicts:
+- **Goods and all items: no statistically significant effect.** This is the pattern the rounding story predicts:
   price rounding shows up in cheap, frequently bought services, not in goods sold by large chains.
 - **Croatia on its own: borderline.** +1.8 against the euro area (p ≈ 0.07), +0.3 against the peers (p ≈ 0.37).
-  The direction matches the other adoptions, but one country's estimate is too noisy to pin down its size.
+  The direction matches the other adoptions, but one country's estimate swings too much to pin down its size.
 
 ## Caveats
 
 - **Overlapping windows.** Neighbouring fake dates share most of their data, so the ~40-220 fake estimates
   per adopter are far from independent; the p-values are a guide, not exact.
 - **Fake dates include crises** (2008-10, EU accession, COVID). That is deliberate: the real adoptions also
-  happened in eventful times (Croatia at the peak of the 2022 inflation surge), so the placebo noise should
+  happened in eventful times (Croatia at the peak of the 2022 inflation surge), so the placebo estimates should
   include such periods.
 - **Slovenia has few fake dates** (38), because its 2007 adoption leaves little history before it.
 - One trend window (24 months) is tested here; the Power BI report shows how the real estimates move with
