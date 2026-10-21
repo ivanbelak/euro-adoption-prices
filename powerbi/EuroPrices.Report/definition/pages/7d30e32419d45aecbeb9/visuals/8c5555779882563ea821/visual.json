@@ -156,6 +156,23 @@
               {
                 "textRuns": [
                   {
+                    "value": "12-month average",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " - the gap lines are 12-month averages: each point averages the 12 months up to it, which smooths out the summer tourist season. Window only sets the range of months, not the averaging.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
                     "value": "Category",
                     "textStyle": {
                       "fontSize": "12pt",
