@@ -26,8 +26,7 @@ određuju velike tvrtke, efekta nema.
 Usput sam nekoliko puta morao korigirati zaključak: prvi rezultat je izgledao jasnije nego što jest, sve dok
 nisam dodao drugu usporednu skupinu i provjeru s "lažnim" datumima uvođenja eura.
 
-Kod sam pisao uz pomoć [Claude Codea](https://claude.com/claude-code). Ja sam birao temu, podatke, raspon i s
-kojim zemljama uspoređivati, te kako izvještaj treba izgledati u Power BI-ju.
+Kod sam pisao uz pomoć [Claude Codea](https://claude.com/claude-code).
 
 Bugarska je uvela euro 2026., pa ću početkom 2027. provjeriti vrijedi li isto i za nju.
 

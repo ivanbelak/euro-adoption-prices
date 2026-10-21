@@ -27,8 +27,7 @@ prices are set by large companies, there is no effect.
 Along the way I had to correct my conclusion a few times: the first result looked clearer than it really
 was, until I added a second comparison group and a test with "fake" adoption dates.
 
-I wrote the code with help from [Claude Code](https://claude.com/claude-code). I chose the topic, the data,
-the time window, which countries to compare with, and how the report should look in Power BI.
+I wrote the code with help from [Claude Code](https://claude.com/claude-code).
 
 Bulgaria adopted the euro in 2026, so in early 2027 I will check whether the same holds there.
 
