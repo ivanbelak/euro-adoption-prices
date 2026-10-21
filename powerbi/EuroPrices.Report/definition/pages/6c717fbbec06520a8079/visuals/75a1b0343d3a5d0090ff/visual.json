@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "75a1b0343d3a5d0090ff",
   "position": {
     "x": 216,
     "y": 96,
     "z": 4000,
-    "width": 240,
     "height": 60,
+    "width": 240,
     "tabOrder": 4000
   },
   "visual": {
@@ -82,7 +82,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
+                    "Name": "c",
                     "Entity": "Control",
                     "Type": 0
                   }
@@ -96,7 +96,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "c"
                                 }
                               },
                               "Property": "country_name"
@@ -212,7 +212,22 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "a8ba1fdf171339b199ca",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Control"
+              }
+            },
+            "Property": "country_name"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

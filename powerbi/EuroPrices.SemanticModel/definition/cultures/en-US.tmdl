@@ -12,19 +12,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "Excess"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Monthly": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "event_study.excess_trendadjusted": {
 			      "Definition": {
@@ -33,19 +21,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "Excess (trend-adjusted)"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Monthly, trend-adjusted": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "event_study.excess_12month_avg": {
 			      "Definition": {
@@ -57,7 +33,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "12-month avg": {
+			          "Adopter minus control": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -78,7 +54,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "12-month avg, trend-adjusted": {
+			          "Estimated euro effect": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -121,6 +97,90 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Control": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "event_study.adopter_index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event Study",
+			          "ConceptualProperty": "Adopter index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Adopter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "event_study.control_index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event Study",
+			          "ConceptualProperty": "Control index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Control": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "event_study.excess_after_1_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event Study",
+			          "ConceptualProperty": "Excess after 1 year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gap after 1 year": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "event_study.excess_after_1_year_trendadjusted": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event Study",
+			          "ConceptualProperty": "Excess after 1 year (trend-adjusted)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gap beyond the pre-euro trend, after 1 year": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

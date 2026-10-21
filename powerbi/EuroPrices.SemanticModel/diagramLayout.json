@@ -85,6 +85,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1241.3769997631368,
+            "y": 402.09774605666092
+          },
+          "nodeIndex": "Breakdown step",
+          "nodeLineageTag": "403d3d7b-eae2-5ed6-aaf1-1397776c73a4",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

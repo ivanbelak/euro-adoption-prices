@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "0d08d32022fb5d55bec6",
   "position": {
     "x": 24,
@@ -147,7 +147,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       },
       {
         "name": "acf97f9cf1fe5c8db934",
@@ -200,7 +201,36 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "879020755bc25968a462",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Category"
+              }
+            },
+            "Property": "category_label"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dcbba816c8dc7ee7e9df",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event Study"
+              }
+            },
+            "Property": "Excess after 1 year"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
