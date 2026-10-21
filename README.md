@@ -29,7 +29,7 @@ prices are set by large companies, there is no effect.
 Along the way I had to correct my conclusion a few times. Compared with the euro area alone, it first looked as
 if services in Croatia rose a full 4 percentage points more because of the euro. Once I took into account that Croatia was
 already rising faster than the euro area before the euro, and added a comparison with similar countries without
-the euro, that number dropped to between 0 and 2 percentage points, depending on the comparison. Finally I ran a test with
+the euro, that number dropped to between 0 and 2.5 percentage points, depending on the comparison and the period. Finally I ran a test with
 "fake" euro adoption dates, and for Croatia alone the effect turned out to be on the edge of statistical
 significance.
 
