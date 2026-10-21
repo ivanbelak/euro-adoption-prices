@@ -9,13 +9,14 @@ I wanted to separate the effect of the euro from general inflation. I compared C
 the euro area (EA19), but also with similar countries that haven't switched to the euro. As an extra, I ran the
 same comparison for the five other countries that have adopted the euro since 2007.
 
-As for goods, maybe I wasn't that naive after all. Against the euro area there is a small rise (about 1 percentage point,
-not statistically significant), which could also come from Croatia catching up with richer countries, with wages
-and prices rising faster. Against similar countries without the euro, it doesn't show up. For services, though,
-it's a different story - across all six countries, they rose about 1.5 percentage points more than in the comparison
-countries in the first year of the euro.
-For Croatia alone the effect goes the same way, but it is hard to say exactly how big it is, because the euro
-came in the middle of the 2022 inflation wave.
+For goods in Croatia, maybe I wasn't that naive after all - against the euro area there is a small rise (about 1.5
+percentage points), which could also come from Croatia catching up with richer countries, with wages and prices
+rising faster. Against similar countries without the euro, it doesn't show up. For services the effect is about
+2 percentage points, but with a lot of uncertainty - depending on the comparison and the period it ranges from 0
+to 2.5, because the euro came in the middle of the 2022 inflation wave.
+
+Across all six countries the picture is clearer: there is no statistically significant effect for goods, while
+services rose about 1.5 percentage points more than in the comparison countries in the first year of the euro.
 
 The report splits the price rise into three parts: how much prices rose in the comparison countries at
 the same time (general inflation), how much faster Croatia was already rising before the euro, and what is
@@ -29,7 +30,7 @@ prices are set by large companies, there is no effect.
 Along the way I had to correct my conclusion a few times. Compared with the euro area alone, it first looked as
 if services in Croatia rose a full 4 percentage points more because of the euro. Once I took into account that Croatia was
 already rising faster than the euro area before the euro, and added a comparison with similar countries without
-the euro, that number dropped to between 0 and 2.5 percentage points, depending on the comparison and the period. Finally I ran a test with
+the euro, that number dropped to about 2 percentage points. Finally I ran a test with
 "fake" euro adoption dates, and for Croatia alone the effect turned out to be on the edge of statistical
 significance.
 
