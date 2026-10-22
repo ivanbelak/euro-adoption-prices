@@ -2,7 +2,10 @@ table 'Pre Trend'
 	lineageTag: a8ddd77f-13a4-548c-b8b1-08da79ca4cc5
 
 	/// How fast excess was already changing before adoption, index points per year, fitted over the window picked in the Window table
-	measure 'Pre-trend per year' = VAR w = SELECTEDVALUE('Window'[months], 24) RETURN CALCULATE(AVERAGE('Pre Trend'[pre_slope]) * 12, 'Pre Trend'[pre_window] = w)
+	measure 'Pre-trend per year' =
+			VAR w = SELECTEDVALUE('Window'[months], 24)
+			RETURN
+			    CALCULATE(AVERAGE('Pre Trend'[pre_slope]) * 12, 'Pre Trend'[pre_window] = w)
 		formatString: 0.0
 		lineageTag: defef700-899b-5771-af9b-af9cbc2db82a
 
