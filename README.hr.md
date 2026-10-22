@@ -2,7 +2,7 @@
 
 [🇬🇧 English](README.md) | 🇭🇷 Hrvatski
 
-Projekt sam napravio prvenstveno kao vježbu u Power BI-ju, SQL-u i Pythonu. Temu sam izabrao kao test
+Projekt sam napravio prvenstveno kao vježbu za Power BI, SQL i Python. Temu sam izabrao kao test
 svoje naivnosti - vjerovao sam da cijene neće rasti značajno isključivo zbog uvođenja eura.
 
 Zanimalo me koliko je rast cijena u Hrvatskoj bio posljedica uvođenja eura, a koliko rezultat općenite
